@@ -5,16 +5,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, width=device-width">
   <title>calendar</title>
-  <script language=javascript>
-n = document.layers
-ie = document.all
-function hide() {
-if (ie || n) {
-if (n) document.Load.visibility = "hidden"
-else Load.style.visibility = "hidden"
-}
-}
-</script>
   <style>
     html{
     height: 100%;
@@ -201,10 +191,10 @@ else Load.style.visibility = "hidden"
 
 </head>
 
-<body onload="hide()">
-  <script language=javascript>
-if(ie || n) document.write('<div id="Load" style="position:absolute;width:100%;height:100%;top:0;left:0;background-color:#ffffff;z-index:5">페이지 로딩중 보여줄 내용</div>')
-</script> 
+<body>
+  <div id="loading_page">로딩중...</div>
+
+<div id="contents_page" style="display:none">
   <div class="top">
 <a href="http://wls0700.github.io/January.html">
   <img src="https://41.media.tumblr.com/2b334ae3028936911061ca53bbb38512/tumblr_nz9xloHgTo1uvu77no1_250.png" alt="Janu" class="Janu"></a>
@@ -233,7 +223,12 @@ if(ie || n) document.write('<div id="Load" style="position:absolute;width:100%;h
   <img src="https://40.media.tumblr.com/debb01596ed6a1c64951a473eb160234/tumblr_nz9xsu4BVd1uvu77no1_250.png" alt="Nov" class="Nov"></a>
 <a href="http://wls0700.github.io/December.html">
   <img src="https://36.media.tumblr.com/0fff1ce882fafdc6a28ad32b2c77e49d/tumblr_nz9xsu4BVd1uvu77no2_250.png" alt="Dec" class="Dec"></a>
-</bottom>
+</div>
+</div>
+<script type="text/javascript">
+document.getElementById('loading_page').style.display="none";
+document.getElementById('contents_page').style.display="";
+</script>
   </body>
 
   </html>
